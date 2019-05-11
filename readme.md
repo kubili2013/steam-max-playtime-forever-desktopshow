@@ -1,4 +1,4 @@
-#使用手册
+# 使用手册
 
 * 首先你得拥有`NB Desktop`这款桌面软件，[NB Desktop 获取地址](https://store.steampowered.com/app/1064820/NB_Desktop/)
 
