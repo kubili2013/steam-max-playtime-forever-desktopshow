@@ -386,26 +386,9 @@
 		}
 		arcSlip();
 
-		function getRequestParameter(key){
-        var params = getRequestParameters();
-        return params[key];
-    }
-    function getRequestParameters(){
-        var arr = (location.search || "").replace(/^\?/,'').split("&");
-        var params = {};
-        for(var i=0; i<arr.length; i++){
-            var data = arr[i].split("=");
-            if(data.length == 2){
-                params[data[0]] = decodeURI(data[1]);
-            }
-        }
-        return params;
-    }
 
-    window.onload = function(){
-        var appkey = getRequestParameter("appkey");
-        var steamid = getRequestParameter("steamid");
-        fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${appkey}&steamid=${steamid}&format=json&include_appinfo=1`)
+    function loadSteamGame(){
+        fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${devkey}&steamid=${steamid}&format=json&include_appinfo=1`)
         .then(response => response.json())
         .then(data => {
             debugger

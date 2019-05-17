@@ -1,0 +1,13 @@
+{
+    "name":"Steam 游戏展示",
+    "desc":"展示你最经常玩的八个游戏，带游玩时间。需要打开配置文件进行设置。",
+    "type":"desktop-widget",
+    "author":"kubili2013",
+    "main":"index.js",
+    "image":"logo.png",
+    "url":"",
+    "setting":{
+        "devkey":"",
+        "steamid":""
+    }
+}
